@@ -68,6 +68,7 @@ body {
 }
 main {
   max-width: 480px;
+  padding: 0 2em;
   /* opacity: 0.2; */
 }
 
@@ -127,6 +128,12 @@ main {
   justify-content: space-between;
 }
 
+.container__header__iconos{
+  display: flex;
+  justify-content: end;
+  gap: 0.5em;
+}
+
 .container__header i {
   font-size: 2em;
 }
@@ -179,8 +186,13 @@ main {
   from{
     transform: rotate(0deg);
   }
-  
   to{
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .container__header__iconos{
+    flex-direction: column;
   }
 }
